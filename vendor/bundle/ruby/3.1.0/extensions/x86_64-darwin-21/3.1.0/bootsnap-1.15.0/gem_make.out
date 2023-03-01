@@ -1,0 +1,16 @@
+current directory: /Users/yuito/workspace/projects/drive_start/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+/Users/yuito/.rbenv/versions/3.1.2/bin/ruby -I /Users/yuito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20221212-36432-6c8uin.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yuito/workspace/projects/drive_start/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/yuito/workspace/projects/drive_start/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/yuito/workspace/projects/drive_start/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20221212-36432-izz1h9/bootsnap
