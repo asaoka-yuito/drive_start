@@ -1,0 +1,24 @@
+div.contaner.d-flex.justify-content-center
+  div.row.g-3
+    div.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+      h1.col.text-align: center ユーザー新規登録
+    = form_with model: @user, local: true, .form-horizontal do |f|
+      div.form-group.col.margin-bottom: 20px;, padding: 15px; 
+        = f.label :last_name
+        = f.text_field :last_name, class: 'form-control', placeholder: 'Last name'
+      div.form-group.col
+        = f.label :first_name
+        = f.text_field :first_name, class: 'form-control', placeholder: 'First name'
+      div.form-group.col
+        = f.label :email
+        = f.email_field :email, class: 'form-control', placeholder: 'Email'
+      div.form-group.col
+        = f.label :password
+        = f.password_field :password, class: 'form-control', placeholder: 'Password' 
+      div.form-group.col
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password confirmation'
+      = f.submit '登録', class: 'btn btn-primary'
+    div.text-center
+      = link_to 'ログインページへ', login_path 
+      

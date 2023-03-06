@@ -53,4 +53,6 @@ gem 'jquery-rails'
 
 gem 'bootstrap'
 
+gem 'sorcery'
+
 
