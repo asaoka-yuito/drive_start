@@ -6,12 +6,9 @@ html
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
   body
-    - if logged_in?
-      = render 'layouts/shared/logout_header'
-    - else
-      = render 'layouts/shared/login_header'
+    = render 'layouts/shared/header'
     = yield
     = render 'layouts/shared/footer'
