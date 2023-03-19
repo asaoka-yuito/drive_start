@@ -1,0 +1,7 @@
+ja:
+  view_name_user_sessions:
+    index:
+      title: "DRIVE START"
+      login: "ログインしました"
+      logout_failed: "ログインに失敗しました"
+      logout: "ログアウトしました"

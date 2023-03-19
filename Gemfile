@@ -51,4 +51,6 @@ gem 'html2slim'
 
 gem 'sorcery'
 
+gem 'rails-i18n'
+
 

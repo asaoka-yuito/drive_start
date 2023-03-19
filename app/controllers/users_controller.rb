@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
         redirect_to login_path
-        flash[:success] = 'ユーザーの作成に成功しました'
+        flash[:success] = t('view_name_user.index.sign_up')
     else
-        flash.now[:danger] = 'ユーザーの作成に失敗しました'
+        flash.now[:danger] = t('view_name_user.index.new_registration_failed')
         render :new
     end
   end

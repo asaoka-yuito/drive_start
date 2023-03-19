@@ -4938,3 +4938,524 @@ Processing by StaticPagesController#top as HTML
 Completed 200 OK in 120ms (Views: 92.2ms | ActiveRecord: 0.0ms | Allocations: 32293)
 
 
+Started GET "/" for ::1 at 2023-03-19 22:45:35 +0900
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#top as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 16.1ms | Allocations: 11699)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.3ms | Allocations: 8134)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 1.0ms | Allocations: 268)
+  Rendered layouts/shared/_footer.html.slim (Duration: 3.1ms | Allocations: 2440)
+  Rendered layout layouts/application.html.slim (Duration: 38.3ms | Allocations: 29931)
+Completed 200 OK in 95ms (Views: 49.1ms | ActiveRecord: 9.4ms | Allocations: 44640)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-19 22:45:37 +0900
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms | Allocations: 2570)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:45:37 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 65.2ms | Allocations: 10879)
+  Rendered layout layouts/application.html.slim (Duration: 65.5ms | Allocations: 10971)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms | Allocations: 11940)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/" for ::1 at 2023-03-19 22:45:40 +0900
+Processing by StaticPagesController#top as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 390)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:45:44 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 7.3ms | Allocations: 2266)
+  Rendered layout layouts/application.html.slim (Duration: 7.6ms | Allocations: 2342)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2610)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/" for ::1 at 2023-03-19 22:45:48 +0900
+Processing by StaticPagesController#top as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:45:48 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 7.1ms | Allocations: 2216)
+  Rendered layout layouts/application.html.slim (Duration: 7.5ms | Allocations: 2293)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2540)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/users/new" for ::1 at 2023-03-19 22:45:53 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/new.html.slim within layouts/application (Duration: 16.6ms | Allocations: 8997)
+  Rendered layout layouts/application.html.slim (Duration: 17.0ms | Allocations: 9079)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 10177)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザー新規登録
+    5:     = form_with model: @user, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :last_name
+    8:         = f.text_field :last_name, class: 'form-control', placeholder: 'Last name'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :first_name
+  
+app/views/users/new.html.slim:7
+app/views/users/new.html.slim:5
+Started GET "/login" for ::1 at 2023-03-19 22:45:54 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 7.4ms | Allocations: 2220)
+  Rendered layout layouts/application.html.slim (Duration: 7.7ms | Allocations: 2297)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2566)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/login" for ::1 at 2023-03-19 22:45:55 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 7.3ms | Allocations: 2216)
+  Rendered layout layouts/application.html.slim (Duration: 7.8ms | Allocations: 2292)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2536)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/users/new" for ::1 at 2023-03-19 22:45:55 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/new.html.slim within layouts/application (Duration: 7.1ms | Allocations: 1859)
+  Rendered layout layouts/application.html.slim (Duration: 7.4ms | Allocations: 1935)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2206)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザー新規登録
+    5:     = form_with model: @user, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :last_name
+    8:         = f.text_field :last_name, class: 'form-control', placeholder: 'Last name'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :first_name
+  
+app/views/users/new.html.slim:7
+app/views/users/new.html.slim:5
+Started GET "/" for ::1 at 2023-03-19 22:46:00 +0900
+Processing by StaticPagesController#top as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:46:00 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 7.5ms | Allocations: 2216)
+  Rendered layout layouts/application.html.slim (Duration: 8.0ms | Allocations: 2292)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2536)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/" for ::1 at 2023-03-19 22:46:00 +0900
+Processing by StaticPagesController#top as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:46:00 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 4.8ms | Allocations: 2216)
+  Rendered layout layouts/application.html.slim (Duration: 5.1ms | Allocations: 2292)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2536)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/login" for ::1 at 2023-03-19 22:47:07 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 5.5ms | Allocations: 2501)
+  Rendered layout layouts/application.html.slim (Duration: 5.7ms | Allocations: 2584)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3212)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/views/view_name_user/en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/users/new" for ::1 at 2023-03-19 22:49:19 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/new.html.slim within layouts/application (Duration: 6.8ms | Allocations: 2075)
+  Rendered layout layouts/application.html.slim (Duration: 7.2ms | Allocations: 2157)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 7.4ms | Allocations: 9536)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/views/view_name_user/en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザー新規登録
+    5:     = form_with model: @user, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :last_name
+    8:         = f.text_field :last_name, class: 'form-control', placeholder: 'Last name'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :first_name
+  
+app/views/users/new.html.slim:7
+app/views/users/new.html.slim:5
+Started GET "/login" for ::1 at 2023-03-19 22:50:50 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 4.6ms | Allocations: 2233)
+  Rendered layout layouts/application.html.slim (Duration: 4.9ms | Allocations: 2315)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2940)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/defaults  /ja.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/login" for ::1 at 2023-03-19 22:52:31 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 6.8ms | Allocations: 2386)
+  Rendered layout layouts/application.html.slim (Duration: 7.1ms | Allocations: 2468)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3093)
+
+
+  
+ActionView::Template::Error (can not load translations from /Users/yuito/workspace/projects/drive_start/config/locales/views/view_name_user/en.yml: expects it to return a hash, but does not):
+    4:       h1.col.text-align: center ユーザーログイン
+    5:     = form_with url: login_path, local: true do |f|
+    6:       div.form-group.col.mb-2.px-3
+    7:         = f.label :email
+    8:         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+    9:       div.form-group.col.mb-2.px-3
+   10:         = f.label :password
+  
+app/views/user_sessions/new.html.slim:7
+app/views/user_sessions/new.html.slim:5
+Started GET "/login" for ::1 at 2023-03-19 22:54:08 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 9.6ms | Allocations: 4496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.3ms | Allocations: 118)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 15.9ms | Allocations: 7179)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 7847)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:54:12 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 3.2ms | Allocations: 2502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.4ms | Allocations: 107)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.2ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 13.1ms | Allocations: 5016)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 5320)
+
+
+Started POST "/login" for ::1 at 2023-03-19 22:54:14 +0900
+Processing by UserSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"yuito@example.com", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'yuito@example.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 171ms (ActiveRecord: 8.6ms | Allocations: 9082)
+
+
+Started GET "/" for ::1 at 2023-03-19 22:54:14 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 0.1ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.3ms | Allocations: 141)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 12.0ms | Allocations: 2895)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 1.0ms | Allocations: 5902)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-19 22:57:29 +0900
+  
+SyntaxError (/Users/yuito/workspace/projects/drive_start/app/controllers/user_sessions_controller.rb:20: syntax error, unexpected label, expecting '='
+...irect_to　login_path, warning: t('view_name_user.index.logo...
+...                       ^~~~~~~~
+):
+  
+app/controllers/user_sessions_controller.rb:20: syntax error, unexpected label, expecting '='
+app/controllers/user_sessions_controller.rb:20: syntax error, unexpected label, expecting '='
+app/controllers/user_sessions_controller.rb:20: syntax error, unexpected label, expecting '='
+Started DELETE "/logout" for ::1 at 2023-03-19 22:57:48 +0900
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 32ms (ActiveRecord: 7.9ms | Allocations: 10408)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:57:49 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 2.6ms | Allocations: 3107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.7ms | Allocations: 116)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 9.0ms | Allocations: 5770)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 6343)
+
+
+Started POST "/login" for ::1 at 2023-03-19 22:57:51 +0900
+Processing by UserSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"yuito@example.com", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'yuito@example.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 159ms (ActiveRecord: 1.8ms | Allocations: 2293)
+
+
+Started GET "/" for ::1 at 2023-03-19 22:57:51 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 0.1ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.3ms | Allocations: 141)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 6.4ms | Allocations: 2895)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.2ms | Allocations: 5670)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-19 22:57:52 +0900
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms | Allocations: 2322)
+
+
+Started GET "/login" for ::1 at 2023-03-19 22:57:52 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 1.9ms | Allocations: 2531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 8.1ms | Allocations: 5050)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 5338)
+
+
+Started POST "/login" for ::1 at 2023-03-19 22:58:25 +0900
+Processing by UserSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"yuito@example.co", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'yuito@example.co' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:9:in `create'
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 1.9ms | Allocations: 2882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.2ms | Allocations: 107)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 12.3ms | Allocations: 5507)
+Completed 200 OK in 29ms (Views: 13.2ms | ActiveRecord: 5.3ms | Allocations: 12326)
+
+
+Started POST "/login" for ::1 at 2023-03-19 23:01:10 +0900
+Processing by UserSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"yuito@example.com", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'yuito@example.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms (ActiveRecord: 5.5ms | Allocations: 9991)
+
+
+Started GET "/" for ::1 at 2023-03-19 23:01:10 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 0.1ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.3ms | Allocations: 141)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 5.6ms | Allocations: 2895)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.8ms | Allocations: 5902)
+
+
+Started DELETE "/logout" for ::1 at 2023-03-19 23:01:12 +0900
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 2324)
+
+
+Started GET "/login" for ::1 at 2023-03-19 23:01:12 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 3.9ms | Allocations: 3100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.4ms | Allocations: 116)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.7ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 21.9ms | Allocations: 5763)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 6329)
+
+
+Started GET "/users/new" for ::1 at 2023-03-19 23:09:05 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering users/new.html.slim within layouts/application
+  Rendered users/new.html.slim within layouts/application (Duration: 16.5ms | Allocations: 3179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.3ms | Allocations: 121)
+  Rendered layouts/shared/_flash_message.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 34.3ms | Allocations: 5903)
+Completed 200 OK in 76ms (Views: 35.5ms | ActiveRecord: 15.9ms | Allocations: 18875)
+
+

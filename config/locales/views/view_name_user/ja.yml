@@ -1,0 +1,6 @@
+ja:
+  view_name_user:
+    index:
+      sign_up: "新規登録"
+      new_registration_failed: "新規登録に失敗しました"
+      deleted: "削除しました"
