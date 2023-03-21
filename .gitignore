@@ -38,6 +38,6 @@ yarn-debug.log*
 
 
 /tmp
-temp/
+/temp
 /vendor/bundle
->>>>>>> issue_start
+
