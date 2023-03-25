@@ -39,5 +39,6 @@ yarn-debug.log*
 
 /tmp
 temp/
+/log
 /vendor/bundle
 >>>>>>> issue_start
