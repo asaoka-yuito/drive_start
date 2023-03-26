@@ -5,8 +5,7 @@ ja:
       update: "更新"
       destroy: "削除"
     message:
-      create:
-        complete: "登録しました"
+      create: "登録しました"
       update:
         complete: "更新しました"
       destory:

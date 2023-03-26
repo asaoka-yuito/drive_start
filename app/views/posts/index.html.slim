@@ -1,0 +1,10 @@
+.container.d-flex.justify-content-center.bg-warning
+  .row
+    .col-12
+      .row.my-3
+        - if @posts.present?
+          == render @posts
+        - else
+          p = t('.no_result')
+        
+      

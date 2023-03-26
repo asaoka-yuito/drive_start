@@ -7,10 +7,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
 
   resources :users, only: %i[new create]
-
-  get 'roads/index'
-  get 'roads/show'
-  get 'roads/new'
-  get 'roads/edit'
+  resources :posts, only: %i[index new create]
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -6,11 +6,11 @@ header.sticky-top
       div.collapse.navbar-collapse#navbarNavDropdown
         ul.navbar-nav
           - if logged_in?
-            li.nav-item = link_to current_user.decorate.full_name
-            li.nav-item.active = link_to 'ログアウト', logout_path, method: :delete
-            li.nav-item = link_to '投稿', new_post_path
-            li.nav-item = link_to t('posts.index.title'), posts_path
-            li.nav-item 確認
+            li.nav-item.mx-1 = link_to current_user.decorate.full_name
+            li.nav-item.mx-1.active = link_to 'ログアウト', logout_path, method: :delete
+            li.nav-item.mx-1 = link_to '投稿', new_post_path
+            li.nav-item.mx-1 = link_to t('view_name_post.index.title'), posts_path
+            li.nav-item.mx-1 確認
           - else
             li.nav-item = link_to 'ログイン', login_path
             li.nav-item = link_to '新規登録', new_user_path
