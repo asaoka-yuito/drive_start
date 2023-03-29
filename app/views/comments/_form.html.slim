@@ -1,0 +1,6 @@
+.row.mb-3
+  .col-lg-8.offset-lg-2
+    = form_with model: comment, url: [post,comment], local: true do |f|
+      = f.label :body
+      = f.text_area :body, class:  'form-control mb-3', id: 'js-new-comment-body', row: 4, placeholder: Comment.human_attribute_name(:body)
+      = f.submit t('view_name_comment.show.comment'), class: 'btn btn-primary'

@@ -1,0 +1,27 @@
+- content_for(:title, @post.title)
+|
+.container.pt-5
+  .row.mb-3
+    .col-lg-8.offset-lg-2
+      h1
+        = t('.title')
+      article.card
+        .card-body
+        row
+          .col-md-9
+            h3.d-inline
+              = @post.title
+            == render 'crud_menus', post: @post
+            ul.list-inline
+              li.list-inline-item
+                = @post.user.decorate.full_name
+              li.list-inline-item
+                = @post.created_at
+        p 
+          = simple_format(@post.body)
+== render 'crud_menus', post: @post if current_user.own?(@post)
+
+
+== render 'comments/form', {post: @post, comment: @comment}
+
+== render 'comments/comments', { comments: @comments }
