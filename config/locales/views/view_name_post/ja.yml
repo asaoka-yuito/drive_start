@@ -5,3 +5,5 @@ ja:
       update: "編集しました"
       destroy: "削除しました"
       title: "投稿一覧"
+    show:
+      post: "投稿する"

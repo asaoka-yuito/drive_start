@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :find_post, only: [:edit, :update, :destroy]
+
   def index
     @posts = Post.all.includes(:user).order(created_at: :desc)
   end
@@ -10,20 +12,42 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to posts_path, success: t('dictionary.message.create', item: Post.model_name.human)
+      redirect_to posts_path, success: t('defaults.message.create', item: Post.model_name.human)
     else
-      flash.now['danger'] = t('dictionary.message.not_create', item: Post.model_name.human)
+      flash.now['danger'] = t('defaults.message.not_create', item: Post.model_name.human)
       render :new
     end
   end
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new #コメントの新規作成
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
+  end
+
+  def edit; end
+
+  def update
+    if @post.update(post_params)
+      redirect_to @post, success: t('defaults.message.update.updated', item: Post.model_name.human)
+    else
+      flash.now['danger'] = t('defaults.message.update.not_updated', item: Post.model_name.human)
+      render :edit
+    end
+  end
+
+  def destroy
+    @post.destroy!
+    redirect_to posts_path, success: t('defaults.message.destory.deleted', item: Post.model_name.human)
   end
 
   private
 
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+
+  def find_post
+    @post = current_user.posts.find(params[:id])
   end
 end

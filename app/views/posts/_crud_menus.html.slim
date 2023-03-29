@@ -1,0 +1,7 @@
+ul.crud-menu-btn.list-inline.float-right
+  li.list-inline-item
+    = link_to edit_post_path(post), id: "button-edit-#{post.id}" do
+      i.fa.pen
+  li.list-inline-item
+    = link_to post_path(post), id: "button-delete-#{post.id}", method: :delete, data: { confirm: t('defaults.message.destory.confirm') } do
+      i.fas.trash

@@ -13,6 +13,7 @@
         li.list-inline-item
           i.far.calendar
           = l post.created_at, format: :long
-        
+        li.list-inline-item
+          == render 'crud_menus', post: post if current_user.own?(post)
       p.card-text
         = post.body

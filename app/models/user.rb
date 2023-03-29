@@ -11,4 +11,9 @@ class User < ApplicationRecord
   validates :last_name, presence: true, length: { maximum: 255 }
 
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
+
+  def own?(object)
+    self.id == object.user_id
+  end
 end

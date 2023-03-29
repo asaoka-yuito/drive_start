@@ -1,15 +1,18 @@
 ja:
-  dictionary:
+  defaults:
     title:
       create: "新規作成"
       update: "更新"
       destroy: "削除"
     message:
-      create: "登録しました"
+      create: "投稿しました"
+      not_create: "投稿に失敗しました"
       update:
-        complete: "更新しました"
+        updated: "更新しました"
+        not_updated: "更新に失敗しました"
       destory:
         confirm: "削除しますか？"
+        deleted: "削除しました"
     button:                      ## 表示するボタン
       create: "新規作成"
       search: "検索"
