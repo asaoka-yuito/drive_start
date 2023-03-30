@@ -13,6 +13,7 @@ ja:
       destory:
         confirm: "削除しますか？"
         deleted: "削除しました"
+      please_login: "ログインしてください"
     button:                      ## 表示するボタン
       create: "新規作成"
       search: "検索"

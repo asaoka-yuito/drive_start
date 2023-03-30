@@ -24965,3 +24965,1369 @@ Processing by PostsController#edit as HTML
 Completed 200 OK in 26ms (Views: 15.3ms | ActiveRecord: 3.0ms | Allocations: 7430)
 
 
+Started DELETE "/logout" for ::1 at 2023-03-31 00:10:08 +0900
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 39ms (ActiveRecord: 8.1ms | Allocations: 15192)
+
+
+Started GET "/login" for ::1 at 2023-03-31 00:10:09 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 16.4ms | Allocations: 17329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.1ms | Allocations: 8984)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.7ms | Allocations: 1969)
+  Rendered layouts/shared/_footer.html.slim (Duration: 3.1ms | Allocations: 2440)
+  Rendered layout layouts/application.html.slim (Duration: 54.3ms | Allocations: 37851)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 39886)
+
+
+Started GET "/" for ::1 at 2023-03-31 00:10:14 +0900
+Processing by StaticPagesController#top as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms | Allocations: 532)
+
+
+Started GET "/login" for ::1 at 2023-03-31 00:10:14 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 3.0ms | Allocations: 2569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 11.2ms | Allocations: 5147)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 5475)
+
+
+Started GET "/" for ::1 at 2023-03-31 00:10:52 +0900
+Processing by StaticPagesController#top as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 517)
+
+
+Started GET "/login" for ::1 at 2023-03-31 00:10:52 +0900
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.slim
+  Rendering user_sessions/new.html.slim within layouts/application
+  Rendered user_sessions/new.html.slim within layouts/application (Duration: 2.2ms | Allocations: 3163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.2ms | Allocations: 118)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 67)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 7.2ms | Allocations: 5835)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 6529)
+
+
+Started POST "/login" for ::1 at 2023-03-31 00:10:55 +0900
+Processing by UserSessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"yuito@example.com", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'yuito@example.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 176ms (ActiveRecord: 9.1ms | Allocations: 10146)
+
+
+Started GET "/" for ::1 at 2023-03-31 00:10:55 +0900
+Processing by StaticPagesController#top as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering static_pages/top.html.slim within layouts/application
+  Rendered static_pages/top.html.slim within layouts/application (Duration: 2.7ms | Allocations: 3368)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 1.3ms | Allocations: 589)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 72)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 9.7ms | Allocations: 6685)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 9903)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:10:58 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (4.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 3.6ms | Allocations: 3390)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [3 times] (Duration: 9.8ms | Allocations: 10166)
+  Rendered posts/index.html.slim within layouts/application (Duration: 86.5ms | Allocations: 21651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.5ms | Allocations: 274)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 61)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.slim (Duration: 92.3ms | Allocations: 24494)
+Completed 200 OK in 130ms (Views: 86.7ms | ActiveRecord: 18.1ms | Allocations: 30350)
+
+
+Started GET "/posts/new" for ::1 at 2023-03-31 00:11:10 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered posts/_form.html.slim (Duration: 11.2ms | Allocations: 4984)
+  Rendered posts/new.html.slim within layouts/application (Duration: 17.4ms | Allocations: 7914)
+  Rendered layout layouts/application.html.slim (Duration: 17.8ms | Allocations: 7992)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.8ms | Allocations: 10512)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :slim, :jbuilder]}. Searched in:
+  * "/Users/yuito/workspace/projects/drive_start/app/views"
+  * "/Users/yuito/workspace/projects/drive_start/vendor/bundle/ruby/3.1.0/gems/actiontext-6.1.7/app/views"
+  * "/Users/yuito/workspace/projects/drive_start/vendor/bundle/ruby/3.1.0/gems/actionmailbox-6.1.7/app/views"
+):
+    1: = form_with model: post, local: true do |f|
+    2:   == render 'shared/error_messages', object: f.object
+    3:   .form-group
+    4:     = f.label :title
+    5:     = f.text_field :title, class: 'form-control'
+  
+app/views/posts/_form.html.slim:2
+app/views/posts/_form.html.slim:1
+app/views/posts/new.html.slim:5
+Started GET "/posts/new" for ::1 at 2023-03-31 00:11:53 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 5.0ms | Allocations: 2447)
+  Rendered posts/_form.html.slim (Duration: 40.3ms | Allocations: 10899)
+  Rendered posts/new.html.slim within layouts/application (Duration: 46.1ms | Allocations: 13914)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.4ms | Allocations: 9128)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.4ms | Allocations: 1954)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.4ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 67.4ms | Allocations: 34346)
+Completed 200 OK in 78ms (Views: 71.0ms | ActiveRecord: 1.3ms | Allocations: 37660)
+
+
+Started POST "/posts" for ::1 at 2023-03-31 00:11:57 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 6.8ms | Allocations: 5074)
+  Rendered posts/_form.html.slim (Duration: 7.6ms | Allocations: 5247)
+  Rendered posts/new.html.slim within layouts/application (Duration: 8.1ms | Allocations: 5467)
+  Rendered layout layouts/application.html.slim (Duration: 8.4ms | Allocations: 5549)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.7ms | Allocations: 10751)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `each' for #<ActionView::Base:0x0000000000a758>):
+    1: - if object.errors.any?
+    2:   #error_explanation.alert.alert-danger
+    3:     ul.mb-0
+    4:       - object.errors.full_messages each do |msg|
+    5:         li = msg
+  
+app/views/layouts/shared/_error_messages.html.slim:4
+app/views/posts/_form.html.slim:2
+app/views/posts/_form.html.slim:1
+app/views/posts/new.html.slim:5
+app/controllers/posts_controller.rb:18:in `create'
+Started POST "/posts" for ::1 at 2023-03-31 00:13:30 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 6.3ms | Allocations: 3359)
+  Rendered posts/_form.html.slim (Duration: 19.4ms | Allocations: 8382)
+  Rendered posts/new.html.slim within layouts/application (Duration: 26.2ms | Allocations: 11387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 8.1ms | Allocations: 9128)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 3.1ms | Allocations: 1943)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.7ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 57.3ms | Allocations: 31737)
+Completed 200 OK in 70ms (Views: 62.1ms | ActiveRecord: 1.9ms | Allocations: 35938)
+
+
+Started POST "/posts" for ::1 at 2023-03-31 00:13:35 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 2.9ms | Allocations: 848)
+  Rendered posts/_form.html.slim (Duration: 8.7ms | Allocations: 2904)
+  Rendered posts/new.html.slim within layouts/application (Duration: 9.4ms | Allocations: 3089)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 18.0ms | Allocations: 5749)
+Completed 200 OK in 28ms (Views: 18.7ms | ActiveRecord: 1.3ms | Allocations: 9125)
+
+
+Started POST "/posts" for ::1 at 2023-03-31 00:16:07 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 7.5ms | Allocations: 3270)
+  Rendered posts/_form.html.slim (Duration: 24.4ms | Allocations: 8280)
+  Rendered posts/new.html.slim within layouts/application (Duration: 30.6ms | Allocations: 11286)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 6.8ms | Allocations: 9111)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.6ms | Allocations: 1944)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.7ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 56.7ms | Allocations: 31620)
+Completed 200 OK in 69ms (Views: 60.8ms | ActiveRecord: 1.5ms | Allocations: 35636)
+
+
+Started POST "/posts" for ::1 at 2023-03-31 00:16:22 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"投稿の確認", "body"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 1.2ms | Allocations: 448)
+  Rendered posts/_form.html.slim (Duration: 5.1ms | Allocations: 1952)
+  Rendered posts/new.html.slim within layouts/application (Duration: 5.8ms | Allocations: 2138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.9ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 15.7ms | Allocations: 4798)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 1.6ms | Allocations: 8156)
+
+
+Started POST "/posts" for ::1 at 2023-03-31 00:16:27 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "body"=>"っm"}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 1.2ms | Allocations: 448)
+  Rendered posts/_form.html.slim (Duration: 5.4ms | Allocations: 1952)
+  Rendered posts/new.html.slim within layouts/application (Duration: 6.0ms | Allocations: 2138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 44)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 14.9ms | Allocations: 4798)
+Completed 200 OK in 24ms (Views: 15.5ms | ActiveRecord: 1.3ms | Allocations: 7903)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:16:35 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 4.5ms | Allocations: 3279)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [3 times] (Duration: 14.4ms | Allocations: 9833)
+  Rendered posts/index.html.slim within layouts/application (Duration: 33.6ms | Allocations: 16022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.2ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 42.6ms | Allocations: 18774)
+Completed 200 OK in 50ms (Views: 39.4ms | ActiveRecord: 5.2ms | Allocations: 21199)
+
+
+Started GET "/posts/20/edit" for ::1 at 2023-03-31 00:16:37 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 44)
+  Rendered posts/_form.html.slim (Duration: 3.1ms | Allocations: 1082)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 8.6ms | Allocations: 3830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 1.0ms | Allocations: 248)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.2ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 18.7ms | Allocations: 6592)
+Completed 200 OK in 31ms (Views: 19.3ms | ActiveRecord: 3.0ms | Allocations: 10358)
+
+
+Started PATCH "/posts/20" for ::1 at 2023-03-31 00:16:39 +0900
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"今日のメニュー", "body"=>"カレー、カレーパン、カツレー、カレーうどん、コロッケカレー"}, "commit"=>"更新する", "id"=>"20"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+Redirected to http://localhost:3000/posts/20
+Completed 302 Found in 12ms (ActiveRecord: 2.8ms | Allocations: 3988)
+
+
+Started GET "/posts/20" for ::1 at 2023-03-31 00:16:39 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 230)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered comments/_form.html.slim (Duration: 6.0ms | Allocations: 3538)
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 20]]
+  ↳ app/views/comments/_comments.html.slim:4
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of comments/_comment.html.erb [3 times] (Duration: 2.5ms | Allocations: 972)
+  Rendered comments/_comments.html.slim (Duration: 12.5ms | Allocations: 8172)
+  Rendered posts/show.html.slim within layouts/application (Duration: 29.4ms | Allocations: 20857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.4ms | Allocations: 278)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 35.4ms | Allocations: 23630)
+Completed 200 OK in 84ms (Views: 32.4ms | ActiveRecord: 10.4ms | Allocations: 35515)
+
+
+Started GET "/posts/20/edit" for ::1 at 2023-03-31 00:16:42 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 45)
+  Rendered posts/_form.html.slim (Duration: 3.5ms | Allocations: 1108)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 4.2ms | Allocations: 1305)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.2ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 13.6ms | Allocations: 4065)
+Completed 200 OK in 24ms (Views: 14.3ms | ActiveRecord: 3.0ms | Allocations: 7718)
+
+
+Started GET "/posts/new" for ::1 at 2023-03-31 00:16:50 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 44)
+  Rendered posts/_form.html.slim (Duration: 2.6ms | Allocations: 986)
+  Rendered posts/new.html.slim within layouts/application (Duration: 3.4ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.6ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 12.4ms | Allocations: 3923)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 1.2ms | Allocations: 6188)
+
+
+Started POST "/posts" for ::1 at 2023-03-31 00:19:12 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"投稿の確認", "body"=>"ddd"}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mPost Create (2.8ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["title", "投稿の確認"], ["body", "ddd"], ["created_at", "2023-03-30 15:19:12.634992"], ["updated_at", "2023-03-30 15:19:12.634992"]]
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 20ms (ActiveRecord: 7.8ms | Allocations: 6241)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:19:12 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 4.4ms | Allocations: 3354)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 14.6ms | Allocations: 10216)
+  Rendered posts/index.html.slim within layouts/application (Duration: 30.4ms | Allocations: 16597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.5ms | Allocations: 9113)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.7ms | Allocations: 1959)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.8ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 53.3ms | Allocations: 37043)
+Completed 200 OK in 63ms (Views: 52.8ms | ActiveRecord: 5.4ms | Allocations: 40223)
+
+
+Started GET "/posts/22/edit" for ::1 at 2023-03-31 00:19:15 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 3.9ms | Allocations: 2418)
+  Rendered posts/_form.html.slim (Duration: 13.3ms | Allocations: 6355)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 19.3ms | Allocations: 9225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 31.8ms | Allocations: 11984)
+Completed 200 OK in 44ms (Views: 32.4ms | ActiveRecord: 4.2ms | Allocations: 15759)
+
+
+Started PATCH "/posts/22" for ::1 at 2023-03-31 00:19:18 +0900
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"投稿の確認", "body"=>"ddd"}, "commit"=>"更新する", "id"=>"22"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms | Allocations: 3771)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:18 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 191)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 6.5ms | Allocations: 3323)
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 21)
+  Rendered comments/_comments.html.slim (Duration: 5.8ms | Allocations: 3668)
+  Rendered posts/show.html.slim within layouts/application (Duration: 27.1ms | Allocations: 15450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.4ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 34.0ms | Allocations: 18211)
+Completed 200 OK in 45ms (Views: 31.0ms | ActiveRecord: 6.6ms | Allocations: 21718)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:25 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 21ms (ActiveRecord: 7.0ms | Allocations: 7839)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:25 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.6ms | Allocations: 205)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 1.4ms | Allocations: 801)
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 14)
+  Rendered comments/_comments.html.slim (Duration: 2.5ms | Allocations: 1446)
+  Rendered posts/show.html.slim within layouts/application (Duration: 8.5ms | Allocations: 4576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.7ms | Allocations: 252)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 58)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 14.4ms | Allocations: 7388)
+Completed 200 OK in 21ms (Views: 12.8ms | ActiveRecord: 4.0ms | Allocations: 10808)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:31 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 19ms (ActiveRecord: 7.7ms | Allocations: 6744)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:31 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 1.0ms | Allocations: 191)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 7.5ms | Allocations: 742)
+  [1m[36mComment Load (1.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 4.1ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 19.4ms | Allocations: 4378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 1.1ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 28.1ms | Allocations: 7140)
+Completed 200 OK in 38ms (Views: 25.2ms | ActiveRecord: 6.5ms | Allocations: 10505)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:32 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 19ms (ActiveRecord: 6.5ms | Allocations: 6744)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:32 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 191)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 1.9ms | Allocations: 742)
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 3.2ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 12.4ms | Allocations: 4379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.9ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 20.1ms | Allocations: 7141)
+Completed 200 OK in 30ms (Views: 17.3ms | ActiveRecord: 6.3ms | Allocations: 10505)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:32 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 20ms (ActiveRecord: 6.8ms | Allocations: 6744)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:32 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 191)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 2.5ms | Allocations: 742)
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 3.0ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 12.3ms | Allocations: 4378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 19.1ms | Allocations: 7140)
+Completed 200 OK in 29ms (Views: 16.2ms | ActiveRecord: 5.9ms | Allocations: 10505)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:33 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 19ms (ActiveRecord: 6.5ms | Allocations: 6744)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:33 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 191)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.2ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 2.0ms | Allocations: 742)
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 3.5ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 12.4ms | Allocations: 4378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 19.1ms | Allocations: 7140)
+Completed 200 OK in 30ms (Views: 17.0ms | ActiveRecord: 6.1ms | Allocations: 10504)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:33 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (6.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 33ms (ActiveRecord: 12.0ms | Allocations: 9654)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:33 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 191)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 1.2ms | Allocations: 742)
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 3.2ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 8.6ms | Allocations: 4379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.4ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 15.4ms | Allocations: 7141)
+Completed 200 OK in 23ms (Views: 13.8ms | ActiveRecord: 4.6ms | Allocations: 10505)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:33 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 13ms (ActiveRecord: 4.7ms | Allocations: 6744)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:33 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 191)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.6ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 1.5ms | Allocations: 742)
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 3.4ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 9.7ms | Allocations: 4378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.4ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 15.5ms | Allocations: 7140)
+Completed 200 OK in 22ms (Views: 14.0ms | ActiveRecord: 4.0ms | Allocations: 10504)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:33 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 26ms (ActiveRecord: 10.7ms | Allocations: 9527)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:34 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 191)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 1.2ms | Allocations: 742)
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 2.7ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 9.8ms | Allocations: 4378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.5ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 15.3ms | Allocations: 7140)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 4.6ms | Allocations: 10504)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:34 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (4.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 22ms (ActiveRecord: 9.6ms | Allocations: 6744)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:34 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 191)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 2.5ms | Allocations: 742)
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 2.8ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 10.6ms | Allocations: 4379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.9ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 16.6ms | Allocations: 7141)
+Completed 200 OK in 26ms (Views: 14.6ms | ActiveRecord: 5.5ms | Allocations: 10505)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:19:35 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 20ms (ActiveRecord: 7.9ms | Allocations: 6744)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:19:35 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.6ms | Allocations: 191)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 2.4ms | Allocations: 742)
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered comments/_comments.html.slim (Duration: 3.1ms | Allocations: 1433)
+  Rendered posts/show.html.slim within layouts/application (Duration: 13.3ms | Allocations: 4379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.5ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.2ms | Allocations: 55)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 21.5ms | Allocations: 7141)
+Completed 200 OK in 32ms (Views: 18.5ms | ActiveRecord: 6.5ms | Allocations: 10505)
+
+
+Started GET "/posts/new" for ::1 at 2023-03-31 00:20:20 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 4.3ms | Allocations: 2438)
+  Rendered posts/_form.html.slim (Duration: 12.3ms | Allocations: 6355)
+  Rendered posts/new.html.slim within layouts/application (Duration: 18.6ms | Allocations: 9361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 8.3ms | Allocations: 9111)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.7ms | Allocations: 1954)
+  Rendered layouts/shared/_footer.html.slim (Duration: 3.0ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 49.4ms | Allocations: 29788)
+Completed 200 OK in 60ms (Views: 52.8ms | ActiveRecord: 1.5ms | Allocations: 32964)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:20:21 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 3.6ms | Allocations: 3279)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 10.0ms | Allocations: 10115)
+  Rendered posts/index.html.slim within layouts/application (Duration: 19.2ms | Allocations: 16338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.4ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 25.0ms | Allocations: 19090)
+Completed 200 OK in 31ms (Views: 22.9ms | ActiveRecord: 3.8ms | Allocations: 21671)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:20:43 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 0.6ms | Allocations: 192)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 4.0ms | Allocations: 991)
+  Rendered posts/index.html.slim within layouts/application (Duration: 13.3ms | Allocations: 3926)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 22.8ms | Allocations: 6678)
+Completed 200 OK in 29ms (Views: 19.3ms | ActiveRecord: 6.1ms | Allocations: 8965)
+
+
+Started GET "/posts/new" for ::1 at 2023-03-31 00:20:45 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 44)
+  Rendered posts/_form.html.slim (Duration: 3.9ms | Allocations: 986)
+  Rendered posts/new.html.slim within layouts/application (Duration: 4.6ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 13.6ms | Allocations: 3922)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 1.5ms | Allocations: 6186)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:22:14 +0900
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 3.3ms | Allocations: 3564)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.2ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.2ms | Allocations: 185)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 15.5ms | Allocations: 12349)
+  Rendered posts/index.html.slim within layouts/application (Duration: 42.0ms | Allocations: 32045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.5ms | Allocations: 9634)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.3ms | Allocations: 1974)
+  Rendered layouts/shared/_footer.html.slim (Duration: 19.1ms | Allocations: 2453)
+  Rendered layout layouts/application.html.slim (Duration: 80.1ms | Allocations: 53204)
+Completed 200 OK in 120ms (Views: 78.2ms | ActiveRecord: 15.0ms | Allocations: 70841)
+
+
+Started GET "/posts/22/edit" for ::1 at 2023-03-31 00:22:16 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 4.4ms | Allocations: 2442)
+  Rendered posts/_form.html.slim (Duration: 18.4ms | Allocations: 7398)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 24.9ms | Allocations: 10400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.7ms | Allocations: 278)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 58)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 34.6ms | Allocations: 13222)
+Completed 200 OK in 53ms (Views: 35.3ms | ActiveRecord: 3.0ms | Allocations: 18825)
+
+
+Started PATCH "/posts/22" for ::1 at 2023-03-31 00:22:18 +0900
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"投稿の確認", "body"=>"ddd"}, "commit"=>"更新する", "id"=>"22"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 14ms (ActiveRecord: 3.4ms | Allocations: 4717)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:22:18 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 230)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 45)
+  Rendered comments/_form.html.slim (Duration: 5.3ms | Allocations: 3790)
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 24)
+  Rendered comments/_comments.html.slim (Duration: 5.2ms | Allocations: 3914)
+  Rendered posts/show.html.slim within layouts/application (Duration: 21.0ms | Allocations: 16828)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.5ms | Allocations: 283)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 65)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 27.2ms | Allocations: 19649)
+Completed 200 OK in 48ms (Views: 25.1ms | ActiveRecord: 10.0ms | Allocations: 28630)
+
+
+Started POST "/posts/22/comments" for ::1 at 2023-03-31 00:22:19 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>""}, "commit"=>"コメントする", "post_id"=>"22"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 39ms (ActiveRecord: 8.6ms | Allocations: 8939)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:22:19 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 0.6ms | Allocations: 205)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.6ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 4.9ms | Allocations: 801)
+  [1m[36mComment Load (3.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 14)
+  Rendered comments/_comments.html.slim (Duration: 8.5ms | Allocations: 1446)
+  Rendered posts/show.html.slim within layouts/application (Duration: 21.6ms | Allocations: 4576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 3.6ms | Allocations: 252)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.2ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 42.7ms | Allocations: 7388)
+Completed 200 OK in 53ms (Views: 38.1ms | ActiveRecord: 8.3ms | Allocations: 10807)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:23:28 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 3.1ms | Allocations: 3331)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 2.9ms | Allocations: 2417)
+  Rendered comments/_form.html.slim (Duration: 7.7ms | Allocations: 5950)
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 14)
+  Rendered comments/_comments.html.slim (Duration: 4.9ms | Allocations: 3692)
+  Rendered posts/show.html.slim within layouts/application (Duration: 25.6ms | Allocations: 21659)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.4ms | Allocations: 9099)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.5ms | Allocations: 1954)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.3ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 45.7ms | Allocations: 42069)
+Completed 200 OK in 55ms (Views: 46.2ms | ActiveRecord: 3.6ms | Allocations: 46335)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:23:34 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 3.0ms | Allocations: 3343)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 2.7ms | Allocations: 2417)
+  Rendered comments/_form.html.slim (Duration: 8.5ms | Allocations: 5951)
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 14)
+  Rendered comments/_comments.html.slim (Duration: 4.5ms | Allocations: 3691)
+  Rendered posts/show.html.slim within layouts/application (Duration: 26.0ms | Allocations: 21661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 4.9ms | Allocations: 9097)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.0ms | Allocations: 1954)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.3ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 44.9ms | Allocations: 42064)
+Completed 200 OK in 55ms (Views: 45.5ms | ActiveRecord: 4.3ms | Allocations: 46391)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:24:26 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 4.6ms | Allocations: 3355)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.8ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 15.2ms | Allocations: 10217)
+  Rendered posts/index.html.slim within layouts/application (Duration: 29.1ms | Allocations: 16599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.8ms | Allocations: 9100)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.5ms | Allocations: 1954)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.7ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 53.1ms | Allocations: 37028)
+Completed 200 OK in 64ms (Views: 52.7ms | ActiveRecord: 5.8ms | Allocations: 40275)
+
+
+Started GET "/posts/new" for ::1 at 2023-03-31 00:24:29 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/new.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 4.2ms | Allocations: 2418)
+  Rendered posts/_form.html.slim (Duration: 12.1ms | Allocations: 6302)
+  Rendered posts/new.html.slim within layouts/application (Duration: 17.8ms | Allocations: 9207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 240)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 26.2ms | Allocations: 11962)
+Completed 200 OK in 34ms (Views: 26.8ms | ActiveRecord: 1.6ms | Allocations: 14465)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:24:31 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 192)
+  Rendered posts/_crud_menus.html.slim (Duration: 1.2ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.6ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 4.2ms | Allocations: 991)
+  Rendered posts/index.html.slim within layouts/application (Duration: 12.4ms | Allocations: 3926)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 21.5ms | Allocations: 6678)
+Completed 200 OK in 28ms (Views: 17.9ms | ActiveRecord: 5.3ms | Allocations: 8976)
+
+
+Started GET "/posts/22/edit" for ::1 at 2023-03-31 00:24:33 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 44)
+  Rendered posts/_form.html.slim (Duration: 3.0ms | Allocations: 1058)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 8.0ms | Allocations: 3807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.8ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 17.2ms | Allocations: 6566)
+Completed 200 OK in 29ms (Views: 17.9ms | ActiveRecord: 3.4ms | Allocations: 10258)
+
+
+Started GET "/posts/22/edit" for ::1 at 2023-03-31 00:24:50 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 2.1ms | Allocations: 2446)
+  Rendered posts/_form.html.slim (Duration: 6.6ms | Allocations: 6443)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 10.1ms | Allocations: 9429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.1ms | Allocations: 9118)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.2ms | Allocations: 1956)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.0ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 28.7ms | Allocations: 29865)
+Completed 200 OK in 41ms (Views: 30.4ms | ActiveRecord: 2.1ms | Allocations: 34278)
+
+
+Started GET "/posts/22/edit" for ::1 at 2023-03-31 00:25:02 +0900
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/edit.html.slim within layouts/application
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 4.0ms | Allocations: 2434)
+  Rendered posts/_form.html.slim (Duration: 11.4ms | Allocations: 6428)
+  Rendered posts/edit.html.slim within layouts/application (Duration: 16.8ms | Allocations: 9454)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 8.1ms | Allocations: 9118)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.6ms | Allocations: 1954)
+  Rendered layouts/shared/_footer.html.slim (Duration: 3.0ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 45.1ms | Allocations: 29888)
+Completed 200 OK in 59ms (Views: 48.0ms | ActiveRecord: 3.4ms | Allocations: 34542)
+
+
+Started PATCH "/posts/22" for ::1 at 2023-03-31 00:25:05 +0900
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"投稿の確認", "body"=>"ddd"}, "commit"=>"更新する", "id"=>"22"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `find_post'
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms | Allocations: 4013)
+
+
+Started GET "/posts/22" for ::1 at 2023-03-31 00:25:05 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.slim
+  Rendering posts/show.html.slim within layouts/application
+  Rendered posts/_crud_menus.html.slim (Duration: 9.4ms | Allocations: 3273)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.slim:17
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/shared/_error_messages.html.slim (Duration: 0.1ms | Allocations: 43)
+  Rendered comments/_form.html.slim (Duration: 4.9ms | Allocations: 3374)
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 22]]
+  ↳ app/views/comments/_comments.html.slim:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 14)
+  Rendered comments/_comments.html.slim (Duration: 5.2ms | Allocations: 3665)
+  Rendered posts/show.html.slim within layouts/application (Duration: 32.7ms | Allocations: 18744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.5ms | Allocations: 245)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 57)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 38.5ms | Allocations: 21508)
+Completed 200 OK in 49ms (Views: 36.6ms | ActiveRecord: 6.0ms | Allocations: 25031)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:25:16 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 192)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 9.6ms | Allocations: 6925)
+  Rendered posts/index.html.slim within layouts/application (Duration: 23.8ms | Allocations: 13094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 0.6ms | Allocations: 237)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/shared/_footer.html.slim (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.slim (Duration: 32.8ms | Allocations: 15846)
+Completed 200 OK in 40ms (Views: 29.4ms | ActiveRecord: 5.6ms | Allocations: 18257)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:25:41 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  Rendered posts/index.html.slim within layouts/application (Duration: 29.0ms | Allocations: 6022)
+  Rendered layout layouts/application.html.slim (Duration: 29.4ms | Allocations: 6113)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.8ms | Allocations: 9261)
+
+
+  
+ActionView::Template::Error (Illegal shortcut
+  /Users/yuito/workspace/projects/drive_start/app/views/posts/index.html.slim, Line 1, Column 10
+    .container..bg-warningd-flex.justify-content-center
+              ^
+):
+    1: .container..bg-warningd-flex.justify-content-center
+    2:   .row
+    3:     .col-12
+    4:       .row.my-3
+  
+app/views/posts/index.html.slim:1
+Started GET "/posts" for ::1 at 2023-03-31 00:25:57 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 5.9ms | Allocations: 3354)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.4ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 17.6ms | Allocations: 10256)
+  Rendered posts/index.html.slim within layouts/application (Duration: 32.3ms | Allocations: 16637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 7.1ms | Allocations: 9100)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.5ms | Allocations: 1954)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.4ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 58.8ms | Allocations: 37065)
+Completed 200 OK in 68ms (Views: 57.2ms | ActiveRecord: 5.7ms | Allocations: 40412)
+
+
+Started GET "/posts" for ::1 at 2023-03-31 00:26:09 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.slim
+  Rendering posts/index.html.slim within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.slim:5
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/posts/index.html.slim:5
+  Rendered posts/_crud_menus.html.slim (Duration: 2.8ms | Allocations: 3354)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.5ms | Allocations: 181)
+  Rendered posts/_crud_menus.html.slim (Duration: 0.3ms | Allocations: 181)
+  Rendered collection of posts/_post.html.slim [4 times] (Duration: 9.7ms | Allocations: 10260)
+  Rendered posts/index.html.slim within layouts/application (Duration: 22.7ms | Allocations: 16589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/shared/_header.html.slim (Duration: 5.2ms | Allocations: 9100)
+  Rendered layouts/shared/_flash_message.html.slim (Duration: 2.5ms | Allocations: 1955)
+  Rendered layouts/shared/_footer.html.slim (Duration: 2.3ms | Allocations: 2438)
+  Rendered layout layouts/application.html.slim (Duration: 43.2ms | Allocations: 37019)
+Completed 200 OK in 50ms (Views: 42.7ms | ActiveRecord: 3.6ms | Allocations: 40268)
+
+
