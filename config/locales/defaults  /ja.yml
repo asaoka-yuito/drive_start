@@ -14,13 +14,15 @@ ja:
         confirm: "削除しますか？"
         deleted: "削除しました"
       please_login: "ログインしてください"
-    button:                      ## 表示するボタン
+      bookmark: "ブックマーク登録"
+      unbookmark: "ブックマークを解除しました" 
+    button:
       create: "新規作成"
       search: "検索"
       clear: "クリア"
       update: "更新"
       destory: "削除"
       cancel: "キャンセル"
-  time:                          ## 表示する時間の形式
+  time:
     formats:
       default: ! "%Y-%m-%d %H:%M:%S"

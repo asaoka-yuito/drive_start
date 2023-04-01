@@ -1,0 +1,4 @@
+- if current_user.bookmark?(post)
+  == render 'unbookmark', { post: post }
+- else
+  == render 'bookmark', { post: post }
