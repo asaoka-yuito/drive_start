@@ -73,6 +73,10 @@ GEM
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     date (3.3.1)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     draper (4.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -86,6 +90,7 @@ GEM
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
     ffi (1.15.5)
+    geocoder (1.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -245,7 +250,9 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  dotenv-rails
   draper
+  geocoder
   html2slim
   jbuilder (~> 2.7)
   listen (~> 3.3)

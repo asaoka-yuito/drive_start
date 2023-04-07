@@ -55,4 +55,10 @@ gem 'rails-i18n'
 
 gem 'draper'
 
+#住所から緯度と経度を変換するGem
+gem 'geocoder'
+
+##環境変数を.envファイルで使う為のGem
+gem 'dotenv-rails'
+
 
