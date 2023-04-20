@@ -1,0 +1,10 @@
+.container.d-flex.justify-content-center.bg-warning
+  .row
+    .col-12
+      h1 コース選択画面
+      .field
+        = form_with model: @map, local: true do |f|
+          .form-group
+            = f.label :course
+            = f.select :course, Map.courses.keys.map {|k| [k, k]}
+          = f.submit class: 'btn btn-primary'

@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2023_04_07_131156) do
     t.string "address"
     t.float "latitude"
     t.float "longitude"
+    t.integer "course", default: 0, null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,11 +1,16 @@
 ja:
   activerecord:                 ## モデルの開始はactiverecord
     models:                     ## モデル
-      model_name_A: "モデルA"
-    attributes:   
+      user: "ユーザー"
+      post: "投稿"
+      map: "地図"
+      road: "ルート"
+    attributes: 
+      road:
+        beginner: "初心者コース"
+        intermediate: "中級者コース"
+        advanced: "上級者コース"
       comment:
-        
-      model_name_A:
         id: "ID"
         name: "名称"
         created_at: "登録日時"
