@@ -41,6 +41,6 @@ yarn-debug.log*
 temp/
 /log
 log
-/.env
+.env
 /vendor/bundle
 >>>>>>> issue_start
