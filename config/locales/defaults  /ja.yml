@@ -10,6 +10,7 @@ ja:
       update:
         updated: "更新しました"
         not_updated: "更新に失敗しました"
+      course: "コースを保存しました"
       destory:
         confirm: "削除しますか？"
         deleted: "削除しました"

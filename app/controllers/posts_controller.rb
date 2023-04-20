@@ -7,9 +7,14 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+
+    @maps = Map.all
+    @map = Map.new
   end
 
   def create
+    @maps = Map.all#あとでまとめて読み込ませる
+    @map = Map.new
     @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to posts_path, success: t('defaults.message.create', item: Post.model_name.human)
@@ -25,7 +30,10 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
 
-  def edit; end
+  def edit
+    @maps = Map.all
+    @map = Map.new
+  end
 
   def update
     if @post.update(post_params)
@@ -43,6 +51,11 @@ class PostsController < ApplicationController
 
   def bookmarks
     @bookmarks_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+  end
+
+  def map
+    @maps = Map.all
+    @map = Map.new
   end
 
   private
